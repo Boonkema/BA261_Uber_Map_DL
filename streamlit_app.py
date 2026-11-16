@@ -29,7 +29,7 @@ DATA_URL = (
 )
 
 @st.cache_data(show_spinner="Loading the example pickup data...")
-def load_data(number_of_rows=100_000):
+def load_data(number_of_rows=1_100_000):
     """Load a portion of the public dataset, no API key or local file needed."""
     data = pd.read_csv(DATA_URL, nrows=number_of_rows)
     data.columns = [str(name).lower() for name in data.columns]
